@@ -2,65 +2,61 @@
 
 [English](README.md)
 
-一个精选的 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 技能集合 — 模块化的 prompt 工作流，扩展 Claude 处理特定任务的能力。
+![License](https://img.shields.io/github/license/Apzx7/skill-garden)
+![Skills](https://img.shields.io/badge/skills-growing-green)
 
-## 什么是 Skill？
+> 给 Claude Code 装上"技能包"，让它在特定领域表现得像专家一样。
 
-Skill 是一个带 YAML frontmatter 的 Markdown 文件，它告诉 Claude Code 如何处理特定任务。每个 skill 定义了触发关键词、指令和标准操作流程（SOP），Claude 在通过 `/skill-name` 调用时会遵循这些流程。
+## 这是什么？
 
-## 技能列表
+[Skill Garden](https://github.com/Apzx7/skill-garden) 是一个 Claude Code 的技能集合仓库。
 
-| 技能 | 分类 | 说明 |
-| :--- | :--- | :--- |
-| [DataSec Model Optimizer](datasec-model-optimizer.md) | 安全 / 机器学习 | 数据安全竞赛模型训练与 F1-score 极致优化，自动处理极端类别不平衡 |
+**什么是 Skill？** 简单来说，Skill 就是一份写给 AI 的"操作手册"。你告诉它：遇到什么情况、按什么步骤做、输出什么格式。AI 拿到这份手册后，就能稳定地输出你想要的结果，而不是每次都即兴发挥。
 
-## 安装
+更通俗点说：给 AI 一个 Skill，就像给一个人一本菜谱 —— 有了菜谱，谁都能做出稳定的菜品，而不需要每次都是大厨现场发挥。
 
-将本仓库克隆到你的 Claude Code 技能目录：
+## 为什么做这个？
+
+起因是打数据安全竞赛时，每次都要手动写一大段 prompt 告诉 AI 怎么处理类别不平衡、怎么做特征工程、怎么调阈值……重复又繁琐。
+
+于是想到：能不能把这些"反复要用的操作"封装成固定的技能文件？用的时候一个 `/` 命令就行。
+
+后来发现这个思路可以延伸到更多领域，于是就有了这个仓库。
+
+## 使用方法
+
+### 安装
 
 ```bash
 git clone https://github.com/Apzx7/skill-garden.git ~/.claude/skills/skill-garden
 ```
 
-或者只复制你需要的 `.md` 技能文件到技能目录。
+### 调用
 
-## 使用
-
-在 Claude Code 中，输入 `/` 加上 skill 的 `name` 值：
+在 Claude Code 中输入 `/` + skill 名称即可：
 
 ```text
 /datasec-model-optimizer
 ```
 
-Claude 将按照该 skill 的标准操作流程生成优化后的输出。
+Claude 会按照 Skill 中定义的流程自动完成任务。
 
-## 创建你自己的 Skill
+## 现有技能
 
-Skill 文件结构如下：
+| 技能 | 说明 |
+| :--- | :--- |
+| [DataSec Model Optimizer](datasec-model-optimizer.md) | 数据安全竞赛模型优化 — 自动处理极端类别不平衡，生成模块化代码 |
 
-```yaml
----
-name: my-skill-name
-description: >
-  一句话描述该 skill 的功能。
-  Triggers: "关键词1", "关键词2"
----
-# 技能标题
-## 步骤一：...
-## 步骤二：...
-```
+## 计划中的技能
 
-- **name**：用作 `/` 命令的标识符
-- **description**：浏览可用技能时显示的描述，包含触发关键词
-- **Body**：Claude 将遵循的详细指令和标准操作流程
+| 方向 | 说明 |
+| :--- | :--- |
+| 历史人物 | 与历史人物对话的交互式 skill |
+| 雅思聊天 | 雅思口语/写作练习助手 |
+| CTF | CTF 竞赛解题辅助 |
+| 代码审计 | 安全代码审计分析 |
 
-## 贡献
-
-欢迎贡献！你可以：
-
-- 提交 Issue 建议新的 skill 创意
-- 提交 PR 添加你自己的 skill 文件
-- 改进现有的 skill
+> 有想法？欢迎提 Issue 或 PR！
 
 ## 许可证
 

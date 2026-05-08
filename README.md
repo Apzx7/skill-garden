@@ -2,65 +2,61 @@
 
 [中文文档](README.zh-CN.md)
 
-A curated collection of custom [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills — modular prompt workflows that extend Claude's capabilities for specific tasks.
+![License](https://img.shields.io/github/license/Apzx7/skill-garden)
+![Skills](https://img.shields.io/badge/skills-growing-green)
 
-## What is a Skill?
+> Give Claude Code a set of "skill packs" so it performs like a domain expert on demand.
 
-A skill is a Markdown file with YAML frontmatter that tells Claude Code how to handle a specific task. Each skill defines triggers, instructions, and standard operating procedures that Claude follows when invoked via `/skill-name`.
+## What is this?
 
-## Skills
+[Skill Garden](https://github.com/Apzx7/skill-garden) is a collection of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
-| Skill                                    | Category      | Description                                                                                           |
-| :--------------------------------------- | :------------ | :---------------------------------------------------------------------------------------------------- |
-| [DataSec Model Optimizer](datasec-model-optimizer.md) | Security / ML | Data security competition model training & F1-score optimization with extreme class imbalance handling |
+**What is a Skill?** In short, a Skill is an "operation manual" for AI. It tells the AI: given a situation, follow these steps, and output in this format. With a Skill, the AI produces consistent, reliable results instead of improvising every time.
 
-## Installation
+Think of it like a recipe book — anyone can cook a reliable dish with a recipe, not just a chef improvising on the spot.
 
-Clone this repo into your Claude Code skills directory:
+## Why this project?
+
+It started during a data security competition. Every time I needed model code, I had to write a long prompt explaining how to handle class imbalance, feature engineering, threshold tuning... repetitive and tedious.
+
+So I thought: why not package these reusable instructions into fixed skill files? One `/` command and you're good to go.
+
+Turns out this idea works across many domains, and so this repo was born.
+
+## Getting Started
+
+### Install
 
 ```bash
 git clone https://github.com/Apzx7/skill-garden.git ~/.claude/skills/skill-garden
 ```
 
-Or copy individual `.md` skill files to your skills directory.
+### Use
 
-## Usage
-
-In Claude Code, type `/` followed by the skill's `name` value from its frontmatter:
+In Claude Code, type `/` followed by the skill name:
 
 ```text
 /datasec-model-optimizer
 ```
 
-Claude will then follow the skill's SOP to generate optimized output.
+Claude will execute the task following the skill's defined workflow.
 
-## Creating Your Own Skill
+## Available Skills
 
-A skill file follows this structure:
+| Skill | Description |
+| :---- | :---------- |
+| [DataSec Model Optimizer](datasec-model-optimizer.md) | Data security competition model optimization — extreme class imbalance handling & modular code generation |
 
-```yaml
----
-name: my-skill-name
-description: >
-  One-line description of what this skill does.
-  Triggers: "keyword1", "keyword2"
----
-# Skill Title
-## Step 1: ...
-## Step 2: ...
-```
+## Planned Skills
 
-- **name**: Used as the `/` command identifier
-- **description**: Shown when browsing available skills; include trigger keywords
-- **Body**: The detailed instructions and SOP Claude will follow
+| Direction | Description |
+| :-------- | :---------- |
+| Historical Figures | Interactive conversations with historical personas |
+| IELTS Chat | IELTS speaking & writing practice assistant |
+| CTF | CTF competition problem-solving assistant |
+| Code Audit | Security code audit analysis |
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-
-- Open an issue to suggest new skill ideas
-- Submit a PR with your own skill files
-- Improve existing skills
+> Have an idea? Feel free to open an issue or submit a PR!
 
 ## License
 
