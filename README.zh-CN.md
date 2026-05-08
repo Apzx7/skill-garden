@@ -5,11 +5,11 @@
 ![License](https://img.shields.io/github/license/Apzx7/skill-garden)
 ![Skills](https://img.shields.io/badge/skills-growing-green)
 
-> 给 Claude Code 装上"技能包"，让它在特定领域表现得像专家一样。
+> 为 AI 编程工具装上"技能包"，让它在特定领域表现得像专家一样。
 
 ## 这是什么？
 
-[Skill Garden](https://github.com/Apzx7/skill-garden) 是一个 Claude Code 的技能集合仓库。
+[Skill Garden](https://github.com/Apzx7/skill-garden) 是一个面向 AI 编程工具的技能集合仓库，主要适配 [Claude Code](https://docs.anthropic.com/en/docs/claude-code)，也可作为 Cursor Rules、Cline 等工具的 prompt 参考。
 
 **什么是 Skill？** 简单来说，Skill 就是一份写给 AI 的"操作手册"。你告诉它：遇到什么情况、按什么步骤做、输出什么格式。AI 拿到这份手册后，就能稳定地输出你想要的结果，而不是每次都即兴发挥。
 

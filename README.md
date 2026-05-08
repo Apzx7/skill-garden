@@ -5,11 +5,11 @@
 ![License](https://img.shields.io/github/license/Apzx7/skill-garden)
 ![Skills](https://img.shields.io/badge/skills-growing-green)
 
-> Give Claude Code a set of "skill packs" so it performs like a domain expert on demand.
+> Equip your AI coding tools with "skill packs" — make them domain experts on demand.
 
 ## What is this?
 
-[Skill Garden](https://github.com/Apzx7/skill-garden) is a collection of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+[Skill Garden](https://github.com/Apzx7/skill-garden) is a skill collection for AI coding tools, primarily built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and also usable as prompt references for Cursor Rules, Cline, and similar tools.
 
 **What is a Skill?** In short, a Skill is an "operation manual" for AI. It tells the AI: given a situation, follow these steps, and output in this format. With a Skill, the AI produces consistent, reliable results instead of improvising every time.
 
