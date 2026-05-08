@@ -46,13 +46,13 @@ Claude will execute the task following the skill's defined workflow.
 | Skill | Description |
 | :---- | :---------- |
 | [DataSec Model Optimizer](datasec-model-optimizer.md) | Data security competition model optimization — extreme class imbalance handling & modular code generation |
+| [AI English Trainer](ai-english-trainer.md) | AI English trainer based on cognitive neuroscience — predictive coding & high-density feedback loops |
 
 ## Planned Skills
 
 | Direction | Description |
 | :-------- | :---------- |
 | Historical Figures | Interactive conversations with historical personas |
-| IELTS Chat | IELTS speaking & writing practice assistant |
 | CTF | CTF competition problem-solving assistant |
 | Code Audit | Security code audit analysis |
 

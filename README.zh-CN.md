@@ -46,13 +46,13 @@ Claude 会按照 Skill 中定义的流程自动完成任务。
 | 技能 | 说明 |
 | :--- | :--- |
 | [DataSec Model Optimizer](datasec-model-optimizer.md) | 数据安全竞赛模型优化 — 自动处理极端类别不平衡，生成模块化代码 |
+| [AI English Trainer](ai-english-trainer.md) | 基于认知神经科学的 AI 英语陪练 — 预测编码 + 高密度反馈循环 |
 
 ## 计划中的技能
 
 | 方向 | 说明 |
 | :--- | :--- |
 | 历史人物 | 与历史人物对话的交互式 skill |
-| 雅思聊天 | 雅思口语/写作练习助手 |
 | CTF | CTF 竞赛解题辅助 |
 | 代码审计 | 安全代码审计分析 |
 
